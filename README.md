@@ -5,22 +5,30 @@ This will be a multi-part question and the expectation is you likely won’t com
 Build a price comparison tool that will get pricing and availability data from these sources:
 
 **URL 1**
+
   https://appedia.heb-platform-interview.hebdigital-prd.com/api/v1/itemdata?upc=101 Response
   {
   "price": "$4.77",
   "stock": 7
-  } Description
+  } 
+  
+  **_Description_**
   Price is returned as a string
   Availability(‘stock’) returned as an integer value, 0 meaning out of stock.
 
 **URL 2**
+
   https://micromazon.heb-platform-interview.hebdigital-prd.com/101/productinfo Response
   {
   "available": true,
   "price": 5.67
-  } Description Price is returned as a double Availability(‘available’) returned as a boolean value
+  } 
+  
+  **_Description_**:
+  Price is returned as a double Availability(‘available’) returned as a boolean value
 
 **URL 3**
+
   https://googdit.heb-platform-interview.hebdigital-prd.com/101 Response
   {
   "a": [
@@ -34,7 +42,10 @@ Build a price comparison tool that will get pricing and availability data from t
   }
   ],
   "p": 478000000
-  } Description Price is returned as microcents (ie 234000000 == $2.34) Availability(‘a’) is returned as an array of objects with quantity(‘q’) available at location(‘l’)
+  } 
+  
+  **_Description_**:
+  Price is returned as microcents (ie 234000000 == $2.34) Availability(‘a’) is returned as an array of objects with quantity(‘q’) available at location(‘l’)
 
 **Requirements**
   • Return the URL that has the lowest price and has the item in stock at any location.
